@@ -1,0 +1,157 @@
+CREATE TYPE lawpro."sex" AS ENUM
+('F','M');
+
+
+CREATE table lawpro.Lawyer(
+"Lawyer_id" integer PRIMARY KEY,
+"FName"  character varying(15) NOT NULL,
+	"LName" character varying(15) NOT NULL,
+	"Street_number" smallint,
+	"City" VARCHAR(20) NOT NULL,
+	"Phone_number" VARCHAR(14),
+	"Email" VARCHAR(70) UNIQUE NOT NULL,   
+	"Number_of_years_Professional_experience" integer,
+	"Sex" lawpro."sex",
+	"Bdate" DATE,
+	 	
+);
+
+******************************************************
+
+CREATE table lawpro.USER(
+"User_id" VARCHAR(6) UNIQUE NOT NULL PRIMARY KEY,
+	"Password" VARCHAR(50) UNIQUE NOT NULL,
+	"Lawyer_id" integer
+);
+********************************************************
+
+CREATE table lawpro.TASK(
+	"Task_id" integer PRIMARY KEY,
+	"Task_description" VARCHAR(100),
+	"Deadline" DATE,
+	"Status" TEXT,
+"Lawyer_id" integer
+);
+********************************************************
+CREATE table lawpro.APPOINTMENT(
+"Appointment_id" integer PRIMARY KEY,
+	"Date" DATE,
+	"Start_time" TIME,
+	"End_time" TIME,
+	"Court_name" VARCHAR(20),
+	"Street_number" SMALLINT,
+	"City" VARCHAR(20),
+"Lawyer_id" integer,
+"Client_id" integer
+);
+***********************************************************
+
+CREATE table lawpro.DOCUMENT(
+	"Document_id" integer PRIMARY KEY,
+	"Document_title" VARCHAR(20),
+	"Creation_date" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+"Client_id" integer,
+"Case_id" integer
+	
+);
+
+******************************************************
+CREATE TABLE lawpro.Client(
+"Client_id" integer PRIMARY KEY,
+	"Name" VARCHAR(50),
+	"Street_number" SMALLINT,
+	"City" VARCHAR(20),
+	"Email" VARCHAR(70) UNIQUE NOT NULL,
+	"Sex" lawpro.sex,
+	"Bdate" DATE,
+	"Phone_number" VARCHAR(14)
+"Lawyer_id" integer
+
+);
+*************************************************************
+CREATE TYPE lawpro."invoice_status" AS ENUM
+('Paid','Notpaid');
+
+
+CREATE table lawpro.BILLING(
+"Billing_id" integer PRIMARY KEY,
+	"Hours" SMALLINT,
+	"Rate" numeric(5,3),
+	"Expenses" numeric(5,3),
+	"Invoice_status" lawpro."invoice_status",
+"Lawyer_id" integer,
+"Case_id" INTEGER
+);
+
+****************************************************************
+
+CREATE TYPE lawpro."case_status" AS ENUM
+('In Progress', 'Completed','Pending');
+
+CREATE TYPE lawpro."case_type" AS ENUM
+('Administrative','Criminal','Civil');
+
+
+CREATE table lawpro.CASE(
+	"Case_id" integer PRIMARY KEY,
+	"Case_type" lawpro."case-type",
+	"Case_status" lawpro."case-status",
+	"Important_date" DATE
+"Lawyer_id" integer,
+"Client_id" integer
+
+	
+);
+
+*******************************************************************
+
+
+ALTER TABLE IF EXISTS lawpro.USER
+ADD CONSTRAINT Lawyer_Case_fk FOREIGN KEY("Lawyer_id")
+REFERENCES lawpro.Lawyer("Lawyer_id") ON DELETE CASCADE;
+
+
+ALTER TABLE IF EXISTS lawpro.CASE
+ADD CONSTRAINT Lawyer_Case_fk FOREIGN KEY("Lawyer_id")
+REFERENCES lawpro.Lawyer("Lawyer_id")on delete cascade;
+
+
+ALTER TABLE IF EXISTS lawpro.CASE
+ADD CONSTRAINT Client_Case_fk FOREIGN KEY("Client_id")
+REFERENCES lawpro.CLIENT("Client_id")on delete cascade;
+
+
+ALTER TABLE IF EXISTS lawpro.APPOINTMENT
+ADD CONSTRAINT Lawyer_Appointment_fk FOREIGN KEY("Lawyer_id")
+REFERENCES lawpro.Lawyer("Lawyer_id")on delete cascade;
+
+ALTER TABLE IF EXISTS lawpro.APPOINTMENT
+ADD CONSTRAINT Client_Appointment_fk FOREIGN KEY("Client_id")
+REFERENCES lawpro.CLIENT("Client_id")on delete cascade;
+
+
+ALTER TABLE IF EXISTS lawpro.DOCUMENT
+ADD CONSTRAINT Case_Document_fk FOREIGN KEY("Case_id")
+REFERENCES lawpro.CASE("Case_id") on delete cascade;
+
+ALTER TABLE IF EXISTS lawpro.TASK
+ADD CONSTRAINT Lawyer_Task_fk FOREIGN KEY("Lawyer_id")
+REFERENCES lawpro.Lawyer("Lawyer_id") on delete cascade ;
+
+
+ALTER TABLE IF EXISTS lawpro.BILLING
+ADD CONSTRAINT Lawyer_Billing_fk FOREIGN KEY("Lawyer_id")
+REFERENCES lawpro.Lawyer("Lawyer_id")on delete cascade ;
+
+
+ALTER TABLE IF EXISTS lawpro.BILLING
+ADD CONSTRAINT Case_Billing_fk FOREIGN KEY("Case_id")
+REFERENCES lawpro.CASE("Case_id") on delete cascade;
+
+
+ALTER TABLE IF EXISTS lawpro.Client
+ADD CONSTRAINT Lawyer_Client_fk FOREIGN KEY("Lawyer_id")
+REFERENCES lawpro.Lawyer("Lawyer_id")on delete cascade;
+
+
+

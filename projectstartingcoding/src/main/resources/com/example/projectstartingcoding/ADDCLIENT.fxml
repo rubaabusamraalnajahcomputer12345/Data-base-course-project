@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="866.0" prefWidth="1541.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectstartingcoding.ADDCLIENTController">
+   <children>
+      <Pane prefHeight="621.0" prefWidth="827.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="CLIENTID_FIELD" layoutX="161.0" layoutY="121.0" prefHeight="31.0" prefWidth="225.0" promptText="CLIENT_ID" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="NAME_FIELD" layoutX="142.0" layoutY="248.0" prefHeight="31.0" prefWidth="273.0" promptText="NAME" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="STREETNUMBER_FIELD" layoutX="142.0" layoutY="375.0" prefHeight="31.0" prefWidth="273.0" promptText="STREET_NUMBER" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="CITY_FIELD" layoutX="147.0" layoutY="496.0" prefHeight="31.0" prefWidth="273.0" promptText="CITY" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="PHONE_FIELD" layoutX="678.0" layoutY="496.0" prefHeight="31.0" prefWidth="225.0" promptText="PHONE_NUMBER" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="BD_FIELD" layoutX="678.0" layoutY="375.0" prefHeight="31.0" prefWidth="225.0" promptText="BDATE" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="EMAIL_FIELD" layoutX="664.0" layoutY="112.0" prefHeight="31.0" prefWidth="225.0" promptText="EMAIL" style="-fx-border-color: #1a83ed;" />
+            <Label layoutX="79.0" layoutY="127.0" text="CLIENT_ID" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="254.0" prefHeight="20.0" prefWidth="51.0" text="NAME" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="380.0" prefHeight="20.0" prefWidth="122.0" text="STREET_NUMBER" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="511.0" prefHeight="20.0" prefWidth="51.0" text="CITY" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="610.0" layoutY="117.0" prefHeight="20.0" prefWidth="51.0" text="EMAIL" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="610.0" layoutY="254.0" prefHeight="20.0" prefWidth="51.0" text="SEX" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="610.0" layoutY="381.0" prefHeight="20.0" prefWidth="51.0" text="BDATE" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="549.0" layoutY="502.0" prefHeight="20.0" prefWidth="122.0" text="PHONE_NUMBER" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="323.0" layoutY="38.0" prefHeight="35.0" prefWidth="254.0" text="ADD NEW CLIENT" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="SAVENEWCLIENT_BUTTON" layoutX="679.0" layoutY="693.0" mnemonicParsing="false" onAction="#addnewclient" prefHeight="45.0" prefWidth="111.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #1a83ed;" text="SAVE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Button>
+            <Button fx:id="CANCLEADDING_BUTTON" layoutX="120.0" layoutY="695.0" mnemonicParsing="false" onAction="#cancleaddnewclient" prefHeight="53.0" prefWidth="111.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #1a83ed;" text="cancle" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <TextField fx:id="LAWYERID_FIELD" layoutX="147.0" layoutY="591.0" prefHeight="31.0" prefWidth="281.0" promptText="LAWYER_ID" style="-fx-border-color: #1a83ed;" />
+            <Label layoutX="36.0" layoutY="596.0" prefHeight="20.0" prefWidth="94.0" text="LAWYER_ID" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="457.0" fitWidth="451.0" layoutX="1016.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../IMAGES/393132015_898660954911454_3213204928935902721_n.jpg" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="SEX_BOX" layoutX="664.0" layoutY="251.0" prefHeight="31.0" prefWidth="232.0" promptText="SEX" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

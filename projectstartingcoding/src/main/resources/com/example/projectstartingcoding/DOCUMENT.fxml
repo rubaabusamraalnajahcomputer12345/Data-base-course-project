@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="866.0" prefWidth="1541.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectstartingcoding.DOCUMENTController">
+   <children>
+      <Pane layoutY="-8.0" prefHeight="745.0" prefWidth="933.0" AnchorPane.bottomAnchor="-9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-8.0">
+         <children>
+            <VBox prefHeight="874.0" prefWidth="267.0" style="-fx-background-color: #1a83ed;">
+               <children>
+                  <Pane prefHeight="874.0" prefWidth="267.0">
+                     <children>
+                        <Button fx:id="PREVIOUS_BUTTONd" layoutX="4.0" layoutY="43.0" mnemonicParsing="false" onAction="#exitd" prefHeight="33.0" prefWidth="59.0" />
+                        <FontAwesomeIcon fill="#1a83ed" glyphName="BACKWARD" layoutX="20.0" layoutY="68.0" size="2em" text="" />
+                        <TextField fx:id="DI_FIELD" layoutX="104.0" layoutY="223.0" />
+                        <TextField fx:id="CREATIONDATE_FIELD" layoutX="96.0" layoutY="412.0" />
+                        <TextField fx:id="DT_FIELD" layoutX="104.0" layoutY="315.0" />
+                        <TextField fx:id="CASEID_FIELD" layoutX="96.0" layoutY="529.0" />
+                        <Label layoutX="15.0" layoutY="227.0" text="Document_id">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="7.0" layoutY="319.0" text="Document_tittle">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="416.0" text="Creation_date">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="533.0" text="Case_id">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <TableView fx:id="DOCUMENTTABLE" layoutX="268.0" layoutY="130.0" onMouseClicked="#getSelected" prefHeight="746.0" prefWidth="1271.0">
+              <columns>
+                <TableColumn fx:id="documentid_col" prefWidth="179.19998168945312" text="Document_id" />
+                <TableColumn fx:id="doctittle_col" prefWidth="248.79998779296875" text="Document_title" />
+                  <TableColumn fx:id="date_col" prefWidth="205.60003662109375" text="Creation_date" />
+                  <TableColumn fx:id="caseid_col" prefWidth="127.19989013671875" text="Case_id" />
+              </columns>
+            </TableView>
+            <Label layoutX="285.0" layoutY="90.0" text="LIST OF DOCUMENTS" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="SEARCH_FIELD" layoutX="1110.0" layoutY="18.0" onAction="#searchdocument" prefHeight="27.0" prefWidth="287.0" promptText="SEARCH" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #1a83ed;" />
+            <Button fx:id="SEARCHDOCBUTTON" layoutX="1405.0" layoutY="19.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #1A83ED; -fx-background-radius: 15; -fx-border-radius: 15;" text="SEARCH" textFill="WHITE" />
+            <FontAwesomeIcon fill="#1a83ed" glyphName="SEARCH" layoutX="1089.0" layoutY="29.0" text="" />
+            <Button fx:id="ADDDOCBUTTON" layoutX="1302.0" layoutY="82.0" mnemonicParsing="false" onAction="#logintoadddocumentframe" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-color: #ffffff; -fx-border-radius: 15;" text="ADD NEW DOCUMENT" textFill="WHITE" />
+            <Button fx:id="UPDOCBUTTON" layoutX="1082.0" layoutY="82.0" mnemonicParsing="false" onAction="#updatedocument" prefHeight="27.0" prefWidth="203.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-color: #ffffff; -fx-border-radius: 15;" text="UPDATE DOCUMENT" textFill="WHITE" />
+            <Button fx:id="DELETEDOCBUTTON" layoutX="846.0" layoutY="81.0" mnemonicParsing="false" onAction="#deletedocument" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: #1a83ed; -fx-border-color: #ffffff; -fx-background-radius: 15; -fx-border-radius: 15;" text="DELETE DOCUMENT" textFill="WHITE" />
+            <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="1317.0" layoutY="99.0" />
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="1095.0" layoutY="99.0" />
+            <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="858.0" layoutY="98.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

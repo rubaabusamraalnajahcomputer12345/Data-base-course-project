@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="866.0" prefWidth="1541.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectstartingcoding.ADDAPPOINTMENTCONTROLLER">
+   <children>
+      <TextField fx:id="APPID_FIELD" layoutX="166.0" layoutY="136.0" prefHeight="27.0" prefWidth="231.0" promptText="APPOINTMENT_ID" style="-fx-border-color: #1a83ed;" />
+      <TextField fx:id="LID_FIELD" layoutX="166.0" layoutY="231.0" prefHeight="27.0" prefWidth="231.0" promptText="LAWYER_ID" style="-fx-border-color: #1a83ed;" />
+      <TextField fx:id="CLIENTID_FIELD" layoutX="166.0" layoutY="323.0" prefHeight="27.0" prefWidth="231.0" promptText="CLIENT_ID" style="-fx-border-color: #1a83ed;" />
+      <TextField fx:id="CNAME_FIELD" layoutX="166.0" layoutY="415.0" prefHeight="27.0" prefWidth="231.0" promptText="COURT_NAME" style="-fx-border-color: #1a83ed;" />
+      <TextField fx:id="CITY_FIELD" layoutX="166.0" layoutY="529.0" prefHeight="27.0" prefWidth="231.0" promptText="CITY" style="-fx-border-color: #1a83ed;" />
+      <TextField fx:id="STARTTIME_FIELD" layoutX="633.0" layoutY="136.0" prefHeight="27.0" prefWidth="231.0" promptText="START_TIME" style="-fx-border-color: #1a83ed;" />
+      <TextField fx:id="ENDTIME_FIELD" layoutX="642.0" layoutY="231.0" prefHeight="27.0" prefWidth="231.0" promptText="END_TIME" style="-fx-border-color: #1a83ed;" />
+      <TextField fx:id="DATE_FIELD" layoutX="633.0" layoutY="323.0" prefHeight="27.0" prefWidth="231.0" promptText="DATE" style="-fx-border-color: #1a83ed;" />
+      <TextField fx:id="STREETNUM_FIELD" layoutX="633.0" layoutY="415.0" prefHeight="27.0" prefWidth="231.0" promptText="STREET_NUMBER" style="-fx-border-color: #1a83ed;" />
+      <Label layoutX="282.0" layoutY="46.0" prefHeight="54.0" prefWidth="462.0" text="ADD NEW APPOINTMENT" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="141.0" text="APPOINTMENT_ID" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="236.0" text="LAWYER_ID" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="328.0" text="CLIENT_ID" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="420.0" text="COURT_NAME" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="534.0" prefHeight="18.0" prefWidth="82.0" text="CITY" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="551.0" layoutY="141.0" text="START_TIME" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="560.0" layoutY="236.0" text="END_TIME" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="560.0" layoutY="328.0" text="DATE" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="537.0" layoutY="420.0" text="STREET_NUMBER" textFill="#1a83ed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="SAVBUTTON" layoutX="801.0" layoutY="653.0" mnemonicParsing="false" onAction="#addnewappointment" prefHeight="41.0" prefWidth="71.0" style="-fx-background-color: #1a83ed; -fx-border-color: #1a83ed; -fx-border-radius: 15; -fx-background-radius: 15;" text="SAVE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="CANCLEBUTTON" layoutX="25.0" layoutY="663.0" mnemonicParsing="false" onAction="#cancleaddnewappointment" prefHeight="42.0" prefWidth="82.0" style="-fx-background-color: #1a83ed; -fx-border-color: #1a83ed; -fx-border-radius: 15; -fx-background-radius: 15;" text="CANCLE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="315.0" fitWidth="530.0" layoutX="935.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../IMAGES/schedule-appointment-button-2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

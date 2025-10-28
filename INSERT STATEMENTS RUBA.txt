@@ -1,0 +1,118 @@
+insert into lawpro.Lawyer("Lawyer_id" , "FName" , "LName" , "Street_number" , "City" , "Phone_number" , "Email" , "Number_of_years_Professional_experience"
+				  , "Sex" , "Bdate") values (208270098,'RUBA','ABU SAMRA',2,'JENIN','0567702490','RUBA123@gmail.com',5,'F','12/10/1995');
+	insert into lawpro.Lawyer("Lawyer_id" , "FName" , "LName" , "Street_number" , "City" , "Phone_number" , "Email" , "Number_of_years_Professional_experience"
+						   , "Sex" , "Bdate") values (2092700199,'AHMAD','QALALWE',7,'NABLUS','0567024951','AHMADahm@gmail.com',2,'M','1/2/2000');
+	insert into lawpro.Lawyer("Lawyer_id" , "FName" , "LName" , "Street_number" , "City" , "Phone_number" , "Email" , "Number_of_years_Professional_experience"
+							  , "Sex" , "Bdate") values (207270097,'FAREED','ODEH',9,'RAMALLAH','0567203561','FAR123@gmail.com',4,'M','23/12/1993');
+		
+	insert into lawpro.Lawyer("Lawyer_id" , "FName" , "LName" , "Street_number" , "City" , "Phone_number" , "Email" , "Number_of_years_Professional_experience"
+						   , "Sex" , "Bdate") values (206270096,'TOQA','RABI',1,'JERICO','0564782103','TO123@gmail.com',2,'F','3/2/1999');
+							   
+	insert into lawpro.Lawyer("Lawyer_id" , "FName" , "LName" , "Street_number" , "City" , "Phone_number" , "Email" , "Number_of_years_Professional_experience"
+					  , "Sex" , "Bdate") values (205270095,'SALEM','ISHTAYA',11,'JERUSALEM','0596321475','SALSAL@gmail.com',6,'M','5/6/1991');
+
+****************************************************
+insert into lawpro.Client ("Client_id" , "Name" , "Street_number" , "City" , "Email" , "Sex" , "Bdate" , "Phone_number","Lawyer_id")
+values(102278596,'sami',2,'jenin','samsam@gmail.com','M','18/8/2001','0567121314',207270097);
+insert into lawpro.Client ("Client_id" , "Name" , "Street_number" , "City" , "Email" , "Sex" , "Bdate" , "Phone_number","Lawyer_id")
+values(102279969,'samar',7,'ramallah','sama123@gmail.com','F','14/6/1987','0597402534',206270096);
+insert into lawpro.Client ("Client_id" , "Name" , "Street_number" , "City" , "Email" , "Sex" , "Bdate" , "Phone_number","Lawyer_id")
+values(102275533,'mai',12,'bethlehem','maiahmad@gmail.com','F','15/6/1988','0568968574',2092700199);
+insert into lawpro.Client ("Client_id" , "Name" , "Street_number" , "City" , "Email" , "Sex" , "Bdate" , "Phone_number","Lawyer_id")
+values(102274512,'lara',13,'yafa','laralar@gmail.com','F','17/7/1987','0568142537',205270095);
+insert into lawpro.Client ("Client_id" , "Name" , "Street_number" , "City" , "Email" , "Sex" , "Bdate" , "Phone_number","Lawyer_id")
+values(102276362,'rami',14,'nablus','rami1122@gmail.com','M','19/9/1999','0567326598',208270098);
+****************************************************************************************
+insert into lawpro.USER ("User_id" , "Password" , "Lawyer_id")values('RUBA12','alnajahuni123ce',208270098);
+insert into lawpro.USER ("User_id" , "Password" , "Lawyer_id")values('AHMAD3','AHAHmad12388oop',2092700199);
+insert into lawpro.USER ("User_id" , "Password" , "Lawyer_id")values('FARE36','FFAARR12345**&&',207270097);
+insert into lawpro.USER ("User_id" , "Password" , "Lawyer_id")values('TOQ369','TOTOABUSAM**1234560',206270096);
+insert into lawpro.USER ("User_id" , "Password" , "Lawyer_id")values('SAL106','salqal23456**!!ce',205270095);
+******************************************************************************************************
+insert INTO lawpro.CASE( "Case_id" , "Important_date" , "Lawyer_id" , "Client_id" , "case_status" , "case_type" )
+VALUES(6
+	,'12/1/2022'
+,208270098
+,102276362
+,'Pending'
+,'Civil'
+);
+insert INTO lawpro.CASE( "Case_id" , "Important_date" , "Lawyer_id" , "Client_id" , "case_status" , "case_type" )
+values(2
+	,'14/6/2023'
+	,2092700199
+,102274512
+,'Completed'	
+,'Criminal'
+);
+insert INTO lawpro.CASE( "Case_id" , "Important_date" , "Lawyer_id" , "Client_id" , "case_status" , "case_type" )
+values(3
+	,'13/8/2023'
+	,207270097
+	,102275533
+		,'In Progress'
+,'Administrative'		
+);
+insert INTO lawpro.CASE( "Case_id" , "Important_date" , "Lawyer_id" , "Client_id" , "case_status" , "case_type" )
+values(4
+,'15/3/2023'
+	,206270096
+	,102279969
+	,'Pending'
+	,'Civil'
+
+);
+insert INTO lawpro.CASE( "Case_id" , "Important_date" , "Lawyer_id" , "Client_id" , "case_status" , "case_type" )
+values(5
+,'22/9/2023'
+	,205270095
+	,102278596
+	,'Completed'
+,'Criminal'
+
+);
+
+
+***************************************************************
+INSERT INTO lawpro.DOCUMENT( "Document_id" , "Document_title","Creation_date","Case_id")values(1,'BANK ROBBERY','23/9/2023 13:16:22',5);
+INSERT INTO lawpro.DOCUMENT(  "Document_id"  , "Document_title","Creation_date","Case_id")values(2,'Real estate disputes','16/3/2023 08:23:56',4);
+INSERT INTO lawpro.DOCUMENT("Document_id" , "Document_title","Creation_date","Case_id")values(3,'kILLING A SMALL GIRL','13/7/2023 10:47:52',3);
+INSERT INTO lawpro.DOCUMENT("Document_id" ,"Document_title","Creation_date","Case_id")values(4,'Lease contracts','15/6/2023 12:03:48',2);
+INSERT INTO lawpro.DOCUMENT("Document_id" ,"Document_title","Creation_date","Case_id")values(5,'Partnership','13/1/2022 11:25:33',1);
+*********************************************************************************
+
+insert into lawpro.TASK( "Task_id" , "Task_description" , "Deadline" , "Status" , "Lawyer_id")
+values(6,'CHECK THE EVIDENCE OF THE KILLING CASE','12/5/2023','prending',208270098);
+insert into lawpro.TASK( "Task_id" , "Task_description" , "Deadline" , "Status" , "Lawyer_id")
+values(2,'search in theft case','24/6/2023','completed',2092700199);
+insert into lawpro.TASK( "Task_id" , "Task_description" , "Deadline" , "Status" , "Lawyer_id")
+values(3,'go to Crime scene and check it','3/10/2023','prending',207270097);
+insert into lawpro.TASK( "Task_id" , "Task_description" , "Deadline" , "Status" , "Lawyer_id")
+values(4,'check the results of checking','9/1/2023','it is not been started',206270096);
+insert into lawpro.TASK( "Task_id" , "Task_description" , "Deadline" , "Status" , "Lawyer_id")
+values(5,'write the report of checking','6/11/2023','prending',205270095);
+*******************************************************
+
+INSERT INTO lawpro.APPOINTMENT ( "Appointment_id" , "Date", "Start_time", "End_time", "Court_name", "Street_number", "City", "Lawyer_id", "Client_id")
+VALUES (6,'19/1/2022', '09:00:00', '10:30:00', 'NABLUS COURT', 123, 'NABLUS',208270098 ,102276362 );
+INSERT INTO lawpro.APPOINTMENT ( "Appointment_id" , "Date", "Start_time", "End_time", "Court_name", "Street_number", "City", "Lawyer_id", "Client_id")
+VALUES (2,'21/6/2023', '08:00:00', '9:00:00', 'JENIN Court', 124, 'JENIN',2092700199 ,102274512 );
+INSERT INTO lawpro.APPOINTMENT ( "Appointment_id" , "Date", "Start_time", "End_time", "Court_name", "Street_number", "City", "Lawyer_id", "Client_id")
+VALUES (3,'20/7/2023', '09:30:00', '10:30:00', 'TULKAREM Court', 100, 'TULKAREM City',207270097,102275533 );
+INSERT INTO lawpro.APPOINTMENT ( "Appointment_id" , "Date", "Start_time", "End_time", "Court_name", "Street_number", "City", "Lawyer_id", "Client_id")
+VALUES (4,'22/3/2023', '01:00:00', '1:30:00', ' JERICO Court', 12, 'JERICO',206270096,102279969 );
+INSERT INTO lawpro.APPOINTMENT (  "Appointment_id" , "Date", "Start_time", "End_time", "Court_name", "Street_number", "City", "Lawyer_id", "Client_id")
+VALUES (5,'29/9/2023', '02:00:00', '2:30:00', 'JERUSALEM Court', 14, 'JERUSALEM',205270095,102278596 );
+
+******************************************************************************************************************
+INSERT INTO lawpro.BILLING( "Billing_id" , "Hours" , "Rate" , "Expenses" , "Invoice_status" , "Lawyer_id" , "Case_id")
+values(6,2,50.500,50.523,'Paid',208270098,1);
+INSERT INTO lawpro.BILLING( "Billing_id" ,  "Hours" , "Rate" , "Expenses" , "Invoice_status" , "Lawyer_id" , "Case_id")
+values(2,7,78.500,87.781,'Notpaid',2092700199,2);
+INSERT INTO lawpro.BILLING( "Billing_id" , "Hours" , "Rate" , "Expenses" , "Invoice_status" , "Lawyer_id" , "Case_id")
+values(3,5,56.000,58.580,'Paid',207270097,3);
+INSERT INTO lawpro.BILLING( "Billing_id" , "Hours" , "Rate" , "Expenses" , "Invoice_status" , "Lawyer_id" , "Case_id")
+values(4,8,35.700,74.000,'Notpaid',206270096,4);
+INSERT INTO lawpro.BILLING("Billing_id" , "Hours" , "Rate" , "Expenses" , "Invoice_status" , "Lawyer_id" , "Case_id")
+values(5,12,31.500,68.000,'Paid',205270095,5);
+SELECT*FROM lawpro.BILLING;

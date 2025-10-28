@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="865.0" prefWidth="1541.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectstartingcoding.CASEController">
+   <children>
+      <Pane prefHeight="612.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutY="-1.0" prefHeight="865.0" prefWidth="247.0">
+               <children>
+                  <Pane prefHeight="874.0" prefWidth="247.0" style="-fx-background-color: #1a83ed;">
+                     <children>
+                        <Button fx:id="PREVIOUS_BUTTONc" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#exitc" prefHeight="35.0" prefWidth="60.0" />
+                        <FontAwesomeIcon fill="#1a83ed" glyphName="BACKWARD" layoutX="22.0" layoutY="32.0" size="2em" />
+                        <TextField fx:id="CASEID_FIELD" layoutX="77.0" layoutY="143.0" />
+                        <TextField fx:id="DATE_FIELD" layoutX="77.0" layoutY="420.0" />
+                        <TextField fx:id="LAWYERID_FIELD" layoutX="77.0" layoutY="536.0" />
+                        <TextField fx:id="CLIENTID_FIELD" layoutX="77.0" layoutY="648.0" />
+                        <Label layoutX="30.0" layoutY="147.0" text="Case_id">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="9.0" layoutY="232.0" text="Case_type">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="327.0" text="Case_status">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="6.0" layoutY="414.0" text="Important&#10;date&#10;">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="9.0" layoutY="539.0" text="Lawyer_id">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="651.0" text="Client_id">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="CASETYPE_BOX" layoutX="76.0" layoutY="229.0" prefWidth="150.0" />
+                        <ComboBox fx:id="CASESTATUS_BOX" layoutX="76.0" layoutY="324.0" prefWidth="150.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <TableView fx:id="CASETABLE" layoutX="246.0" layoutY="164.0" onMouseClicked="#getSelected" prefHeight="702.0" prefWidth="1296.0">
+              <columns>
+                <TableColumn fx:id="caseid_col" prefWidth="156.7999725341797" text="Case_id" />
+                <TableColumn fx:id="casetype_col" prefWidth="160.800048828125" text="Case_type" />
+                  <TableColumn fx:id="casestatus_col" prefWidth="204.0" text="Case_status" />
+                  <TableColumn fx:id="date_col" prefWidth="230.40008544921875" text="Important_date" />
+                  <TableColumn fx:id="lid_col" prefWidth="209.59991455078125" text="Lawyer_id" />
+                  <TableColumn fx:id="clientid_col" prefWidth="172.7999267578125" text="Client_id" />
+              </columns>
+            </TableView>
+            <Label layoutX="259.0" layoutY="95.0" prefHeight="45.0" prefWidth="237.0" text="LIST OF CASES" textFill="#1a83ed">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="SEARCHCASEBUTTON" layoutX="1402.0" layoutY="21.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="113.0" style="-fx-background-color: #1A83ED; -fx-background-radius: 15; -fx-border-radius: 15;" text="SEARCH" textFill="WHITE" />
+            <TextField fx:id="SEARCH_FIELD" layoutX="1092.0" layoutY="25.0" onAction="#searchcase" prefHeight="27.0" prefWidth="298.0" promptText="SEARCH" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #1a83ed;" />
+            <FontAwesomeIcon fill="#1a83ed" glyphName="SEARCH" layoutX="1067.0" layoutY="42.0" />
+            <Button fx:id="ADDCASEBUTTON" layoutX="1344.0" layoutY="104.0" mnemonicParsing="false" onAction="#logintoaddnewcaseframe" prefHeight="27.0" prefWidth="163.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff;" text="ADD NEW CASE" textFill="WHITE" />
+            <Button fx:id="UPCASEBUTTON" layoutX="1162.0" layoutY="103.0" mnemonicParsing="false" onAction="#updatecase" prefHeight="27.0" prefWidth="163.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff;" text="UPDATE CASE" textFill="WHITE" />
+            <Button fx:id="DELETECASEBUTTON" layoutX="980.0" layoutY="102.0" mnemonicParsing="false" onAction="#deletecase" prefHeight="27.0" prefWidth="157.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff;" text="DELETE CASE" textFill="WHITE" />
+            <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="1358.0" layoutY="121.0" />
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="1180.0" layoutY="120.0" />
+            <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="991.0" layoutY="119.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="866.0" prefWidth="1541.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectstartingcoding.DASHBORDFORADMINController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="165.0">
+         <children>
+            <AnchorPane fx:id="side_ankerpane" prefHeight="867.0" prefWidth="166.0" style="-fx-background-color: #1a83ed; -fx-border-color: #1a83ed;">
+               <children>
+                  <Button fx:id="LAWYER_BUTTON" layoutX="7.0" layoutY="101.0" mnemonicParsing="false" onAction="#logintolawyerframe" prefHeight="27.0" prefWidth="155.0" style="-fx-border-radius: 15; -fx-border-color: #ffffff; -fx-background-radius: 15; -fx-background-color: #1a83ed;" text="LAWYERS" textFill="WHITE" />
+                  <Button fx:id="CLIENT_BUTTON" layoutY="166.0" mnemonicParsing="false" onAction="#logintoclientframe" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff;" text="CLIENTS" textFill="WHITE" />
+                  <Button fx:id="DOCUMENT_BUTTON" layoutX="7.0" layoutY="238.0" mnemonicParsing="false" onAction="#logintodocumentframe" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-color: #ffffff; -fx-border-radius: 15;" text="DOCUMENTS" textFill="WHITE" />
+                  <Button fx:id="TASK_BUTTON" layoutX="4.0" layoutY="317.0" mnemonicParsing="false" onAction="#logintotaskframe" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-color: #ffffff; -fx-border-radius: 15;" text="TASKS" textFill="WHITE" />
+                  <Button fx:id="APPOINTMENT_BUTTON" layoutX="4.0" layoutY="396.0" mnemonicParsing="false" onAction="#logintoappointmentframe" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-border-radius: 15; -fx-background-radius: 15; -fx-border-color: #ffffff;" text="APPOINTMENTS" textFill="WHITE" />
+                  <Button fx:id="CASES_BUTTON" layoutX="7.0" layoutY="472.0" mnemonicParsing="false" onAction="#logintocaseframe" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-color: #ffffff; -fx-border-radius: 15;" text="CASES" textFill="WHITE" />
+                  <Button fx:id="BILLINGS_BUTTON" layoutX="4.0" layoutY="547.0" mnemonicParsing="false" onAction="#logintobillingframe" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-color: #ffffff; -fx-border-radius: 15;" text="BILLINGS" textFill="WHITE" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="30.0" layoutY="119.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="31.0" layoutY="183.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="FILE" layoutX="29.0" layoutY="255.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="TASKS" layoutX="30.0" layoutY="334.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="TABLE" layoutX="25.0" layoutY="413.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="LIST" layoutX="30.0" layoutY="489.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="25.0" layoutY="564.0" />
+                  <Button fx:id="LOGOUT_BUTTON" layoutX="7.0" layoutY="702.0" mnemonicParsing="false" onAction="#logoutframe" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #1a83ed; -fx-border-color: #ffffff; -fx-border-radius: 15; -fx-background-radius: 15;" text="LOG OUT" textFill="WHITE" />
+                  <Button fx:id="LAST_BUTTON" layoutX="2.0" layoutY="614.0" mnemonicParsing="false" onAction="#makeareport" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-border-color: #ffffff; -fx-background-radius: 15; -fx-border-radius: 15;" text="REPORT" textFill="WHITE" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="FOLDER" layoutX="25.0" layoutY="632.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="28.0" layoutY="720.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Pane prefHeight="866.0" prefWidth="1378.0">
+         <children>
+            <TextField fx:id="SEARCH_FIELD" layoutX="902.0" layoutY="24.0" prefHeight="27.0" prefWidth="335.0" promptText="Search" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #1a83ed;" />
+            <FontAwesomeIcon fill="#1a83ed" glyphName="SEARCH" layoutX="880.0" layoutY="41.0" />
+            <Button fx:id="SEARCH_BUTTON" layoutX="1244.0" layoutY="27.0" mnemonicParsing="false" onAction="#searchuser" prefHeight="25.0" prefWidth="108.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #1a83ed;" text="SEARCH" textFill="WHITE" />
+            <Label fx:id="HELLO_LABEL" layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="200.0" text="HELLO , ADMIN!" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="ADDUSER_BUTTON" layoutX="551.0" layoutY="71.0" mnemonicParsing="false" onAction="#logintoadduserframe" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-border-color: #1a83ed; -fx-border-radius: 15; -fx-background-radius: 15;" text="ADD NEW USER" textFill="WHITE" />
+            <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="564.0" layoutY="90.0" size="1.5em" wrappingWidth="12.0" />
+            <TableView fx:id="USERTABLE" layoutY="176.0" onMouseClicked="#getSelected" prefHeight="691.0" prefWidth="688.0">
+              <columns>
+                <TableColumn fx:id="username_column" prefWidth="164.79998016357422" text="USER_ID" />
+                <TableColumn fx:id="password_column" prefWidth="184.0" text="PASSWORD" />
+              </columns>
+            </TableView>
+            <Label layoutX="11.0" layoutY="137.0" text="LIST OF USERS" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="DELETEUSER_BUTTON" layoutX="396.0" layoutY="71.0" mnemonicParsing="false" onAction="#deleteuser" prefHeight="27.0" prefWidth="150.0" style="-fx-background-color: #1a83ed; -fx-border-color: #1a83ed; -fx-border-radius: 15; -fx-background-radius: 15;" text="DELETE USER" textFill="WHITE" />
+            <Button fx:id="ruba_button" layoutX="234.0" layoutY="71.0" mnemonicParsing="false" onAction="#edit" prefHeight="27.0" prefWidth="150.0" style="-fx-background-color: #1a83ed; -fx-border-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15;" text="UPDATE USER" textFill="WHITE" />
+            <TextField fx:id="pass_txt" layoutX="990.0" layoutY="420.0" prefHeight="31.0" prefWidth="247.0" style="-fx-border-color: #1a83ed;" />
+            <Label layoutX="899.0" layoutY="288.0" prefHeight="17.0" prefWidth="59.0" text="USER_ID" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="899.0" layoutY="423.0" prefHeight="20.0" prefWidth="91.0" text="PASSWORD" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user_txt" layoutX="990.0" layoutY="282.0" prefHeight="31.0" prefWidth="247.0" style="-fx-border-color: #1a83ed;" />
+            <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="412.0" layoutY="90.0" size="1.5em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="247.0" layoutY="90.0" size="1.5em" />
+         </children>
+      </Pane>
+   </children>
+</HBox>

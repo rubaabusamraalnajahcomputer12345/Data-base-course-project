@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="866.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectstartingcoding.LAWYERCONTROLLER">
+   <children>
+      <Pane layoutX="-0.8" layoutY="-0.8" prefHeight="748.0" prefWidth="1906.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-252.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <TableView fx:id="LAWYERTABLE" layoutX="340.0" layoutY="77.0" onMouseClicked="#getSelected" prefHeight="792.0" prefWidth="1207.0">
+              <columns>
+                <TableColumn fx:id="lawyerid_col" prefWidth="75.0" text="Lawyer_id" />
+                <TableColumn prefWidth="141.59996032714844" text="Name">
+                     <columns>
+                        <TableColumn fx:id="fname_col" prefWidth="75.0" text="FName" />
+                        <TableColumn fx:id="lname_col" prefWidth="75.0" text="LName" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="phone_col" prefWidth="132.79998779296875" text="Phone_number" />
+                  <TableColumn fx:id="email_col" prefWidth="115.20001220703125" text="Email" />
+                  <TableColumn fx:id="year_col" prefWidth="187.2000732421875" text="Number_of_years_Professional_experiences" />
+                  <TableColumn fx:id="sex_col" prefWidth="62.4000244140625" text="Sex" />
+                  <TableColumn fx:id="bd_col" prefWidth="140.800048828125" text="Bdate" />
+                  <TableColumn fx:id="address_col" prefWidth="146.39990234375" text="Address">
+                     <columns>
+                        <TableColumn fx:id="street_col" prefWidth="97.5999755859375" text="Street_number" />
+                        <TableColumn fx:id="city_col" prefWidth="105.60009765625" text="City" />
+                     </columns></TableColumn>
+              </columns>
+            </TableView>
+            <VBox layoutX="-3.0" layoutY="-2.0" prefHeight="872.0" prefWidth="342.0">
+               <children>
+                  <Pane prefHeight="871.0" prefWidth="342.0" style="-fx-background-color: #1a83ed;">
+                     <children>
+                        <Button fx:id="PREVIOUS_BUTTON" layoutX="6.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" prefHeight="27.0" prefWidth="47.0" />
+                        <FontAwesomeIcon fill="#1a83ed" glyphName="BACKWARD" layoutX="17.0" layoutY="37.0" size="2em" text="" />
+                        <TextField fx:id="LAWYERID_FIELD" layoutX="171.0" layoutY="89.0" />
+                        <TextField fx:id="FNAME_FIELD" layoutX="173.0" layoutY="154.0" />
+                        <TextField fx:id="LNAME_FIELD" layoutX="173.0" layoutY="220.0" />
+                        <TextField fx:id="CITY_FIELD" layoutX="173.0" layoutY="272.0" />
+                        <TextField fx:id="PHONE_FIELD" layoutX="171.0" layoutY="324.0" />
+                        <TextField fx:id="EMAIL_FIELD" layoutX="171.0" layoutY="394.0" />
+                        <TextField fx:id="YEAR_FIELD" layoutX="171.0" layoutY="463.0" />
+                        <TextField fx:id="BD_FIELD" layoutX="171.0" layoutY="613.0" />
+                        <Label layoutX="100.0" layoutY="93.0" text="Lawyer_id" textFill="#090a0b">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="123.0" layoutY="158.0" text="FName">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="123.0" layoutY="224.0" text="LName">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="131.0" layoutY="276.0" text="City">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="328.0" text="Phone-number">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="122.0" layoutY="394.0" text="Email">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="467.0" prefHeight="17.0" prefWidth="165.0" text="Number_of_years_Professional_experiences">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="134.0" layoutY="536.0" text="Sex">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="127.0" layoutY="617.0" text="Bdate">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="STREET_FIELD" layoutX="171.0" layoutY="688.0" />
+                        <Label layoutX="74.0" layoutY="691.0" text="Street_number">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="SEX_BOX" layoutX="170.0" layoutY="534.0" prefWidth="150.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <TextField fx:id="SEARCH_FIELD" layoutX="1268.0" layoutY="19.0" onAction="#searchlawyer" prefHeight="27.0" prefWidth="210.0" promptText="SEARCH" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #1a83ed;" />
+            <Button fx:id="SEARCHLAWBUTTON" layoutX="1485.0" layoutY="19.0" mnemonicParsing="false" style="-fx-background-color: #1A83ED; -fx-background-radius: 15; -fx-border-radius: 15;" text="SEARCH" textFill="WHITE" />
+            <FontAwesomeIcon fill="#1a83ed" glyphName="SEARCH" layoutX="1242.0" layoutY="36.0" />
+            <Label layoutX="341.0" layoutY="51.0" prefHeight="17.0" prefWidth="122.0" text="LIST OF LAWYERS" textFill="#1a83ed">
+               <font>
+                  <Font name="DejaVu Serif" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="ADDLAWBUTTON" layoutX="618.0" layoutY="24.0" mnemonicParsing="false" onAction="#addnewlawyer" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff;" text="ADD NEW  LAWYER" textFill="WHITE" />
+            <Button fx:id="UPDATELAWYER_BUTTON" layoutX="969.0" layoutY="25.0" mnemonicParsing="false" onAction="#updatelawyer" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #1a83ed; -fx-border-color: #ffffff; -fx-background-radius: 15; -fx-border-radius: 15;" text="UPDATE LAWYER" textFill="WHITE" />
+            <Button fx:id="DELETELAWBUTTON" layoutX="788.0" layoutY="25.0" mnemonicParsing="false" onAction="#deletelawyer" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff;" text="DELETE LAWYER" textFill="WHITE" />
+            <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="628.0" layoutY="43.0" text="" />
+            <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="797.0" layoutY="43.0" />
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="983.0" layoutY="44.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

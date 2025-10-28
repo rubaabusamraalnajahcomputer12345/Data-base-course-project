@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="866.0" prefWidth="1551.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectstartingcoding.ADDCASECONTROLLER">
+   <children>
+      <Pane layoutX="282.0" layoutY="183.0" prefHeight="631.0" prefWidth="838.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="CASEID_FIELD" layoutX="144.0" layoutY="150.0" prefHeight="35.0" prefWidth="305.0" promptText="CASE_ID" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="DATE_FIELD" layoutX="144.0" layoutY="282.0" prefHeight="35.0" prefWidth="305.0" promptText="IMPORTANT_DATE" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="LAWYERID_FIELD" layoutX="151.0" layoutY="440.0" prefHeight="35.0" prefWidth="305.0" promptText="LAWYER_ID" style="-fx-border-color: #1a83ed;" />
+            <TextField fx:id="CLIENTID_FIELD" layoutX="586.0" layoutY="150.0" prefHeight="35.0" prefWidth="305.0" promptText="CLIENT_ID" style="-fx-border-color: #1a83ed;" />
+            <Label layoutX="384.0" layoutY="47.0" text="ADD NEW CASE" textFill="#1a83ed">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="158.0" text="CASE_ID" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="290.0" text="IMPORTANT_DATE" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="448.0" text="LAWYER_ID" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="494.0" layoutY="157.0" text="CLIENT_ID" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="482.0" layoutY="299.0" text="CASE_STATUS" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="502.0" layoutY="447.0" text="CASE_TYPE" textFill="#1a83ed">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="CASESTATUS_BOX" layoutX="590.0" layoutY="296.0" prefHeight="25.0" prefWidth="305.0" />
+            <ComboBox fx:id="CASETYPE_BOX" layoutX="595.0" layoutY="444.0" prefHeight="25.0" prefWidth="305.0" />
+            <Button fx:id="addnewcase_button" layoutX="792.0" layoutY="633.0" mnemonicParsing="false" onAction="#addnewcase" prefHeight="57.0" prefWidth="103.0" style="-fx-border-color: #1a83ed; -fx-background-color: #1a83ed; -fx-background-radius: 15; -fx-border-radius: 15;" text="SAVE" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
+            <Button fx:id="CANCLEADDING_BUTTON" layoutX="93.0" layoutY="642.0" mnemonicParsing="false" onAction="#cancleaddingcase" prefHeight="57.0" prefWidth="103.0" style="-fx-background-color: #1a83ed; -fx-border-color: #1a83ed; -fx-border-radius: 15; -fx-background-radius: 15;" text="CANCLE" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <ImageView fitHeight="541.0" fitWidth="517.0" layoutX="1006.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../IMAGES/problem_solving.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
